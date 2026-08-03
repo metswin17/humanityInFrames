@@ -1,6 +1,9 @@
 import QuotePanel from "../components/QuotePanel";
 import BooksPanel from "../components/BooksPanel";
 import InspirationalCarousel from "../components/InspirationalCarousel";
+import PictureFrame from "../components/PictureFrame";
+import frameImage from "../assets/images/Exhilirating.jpg";
+
 
 function Home() {
   return (
