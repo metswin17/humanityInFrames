@@ -1,22 +1,22 @@
+import QuotePanel from "../components/QuotePanel";
+import BooksPanel from "../components/BooksPanel";
+import InspirationalCarousel from "../components/InspirationalCarousel";
+
 function Home() {
   return (
-    <main>
+    <main className="container mt-5">
+      <div className="row">
 
-      <section>
-        <h2>Inspirational Quote</h2>
-        <p>Quote will appear here.</p>
-      </section>
+        <div className="col-md-4">
+          <QuotePanel />
+          <BooksPanel />
+        </div>
 
-      <section>
-        <h2>Inspirational Books</h2>
-        <p>Books will appear here.</p>
-      </section>
+        <div className="col-md-8">
+          <InspirationalCarousel />
+        </div>
 
-      <section>
-        <h2>Inspirational Carousel</h2>
-        <p>Carousel will appear here.</p>
-      </section>
-
+      </div>
     </main>
   );
 }
