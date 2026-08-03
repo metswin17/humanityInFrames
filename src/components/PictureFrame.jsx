@@ -1,7 +1,13 @@
-function PictureFrame({ image, alt }) {
+import "./PictureFrame.css";
+
+function PictureFrame({ src, alt }) {
   return (
     <div className="picture-frame">
-      <img src={image} alt={alt} className="frame-image" />
+      <img
+        src={src}
+        alt={alt}
+        className="frame-image"
+      />
     </div>
   );
 }
