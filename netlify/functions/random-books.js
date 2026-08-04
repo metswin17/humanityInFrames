@@ -1,25 +1,23 @@
 const OPEN_LIBRARY_URL =
-  "https://openlibrary.org/search.json" +
-  "?q=personal+growth" +
-  "&fields=key,title,author_name,first_publish_year,cover_i" +
-  "&limit=12";
+  "https://openlibrary.org/subjects/self_help.json?limit=20";
 
 const FALLBACK_BOOK = {
   title: "The Alchemist",
   author: "Paulo Coelho",
   firstPublishYear: 1988,
   coverUrl: "",
-  bookUrl: "https://openlibrary.org/search?q=The+Alchemist+Paulo+Coelho",
+  bookUrl:
+    "https://openlibrary.org/search?q=The+Alchemist+Paulo+Coelho",
 };
 
-async function requestBooks() {
-  const controller = new AbortController();
-
-  const timeoutId = setTimeout(() => {
-    controller.abort();
-  }, 8000);
-
+export default async function handler() {
   try {
+    const controller = new AbortController();
+
+    const timeoutId = setTimeout(() => {
+      controller.abort();
+    }, 12000);
+
     const response = await fetch(OPEN_LIBRARY_URL, {
       headers: {
         "User-Agent": "HumanityInFrames/1.0",
@@ -27,40 +25,27 @@ async function requestBooks() {
       signal: controller.signal,
     });
 
-    if (!response.ok) {
-      throw new Error(`Open Library responded with ${response.status}`);
-    }
-
-    return await response.json();
-  } finally {
     clearTimeout(timeoutId);
-  }
-}
 
-export default async function handler() {
-  try {
-    let data;
-
-    try {
-      data = await requestBooks();
-    } catch (firstError) {
-      console.warn("First Open Library request failed:", firstError.message);
-
-      // Wait briefly, then try one more time.
-      await new Promise((resolve) => setTimeout(resolve, 750));
-
-      data = await requestBooks();
+    if (!response.ok) {
+      throw new Error(
+        `Open Library responded with ${response.status}`
+      );
     }
 
-    const usableBooks = data.docs.filter(
+    const data = await response.json();
+
+    const usableBooks = data.works.filter(
       (book) =>
         book.title &&
-        book.author_name?.length &&
+        book.authors?.length &&
         book.key
     );
 
     if (usableBooks.length === 0) {
-      throw new Error("Open Library returned no usable books.");
+      throw new Error(
+        "Open Library returned no usable books."
+      );
     }
 
     const randomIndex = Math.floor(
@@ -69,37 +54,36 @@ export default async function handler() {
 
     const selectedBook = usableBooks[randomIndex];
 
-    const workPath = selectedBook.key.startsWith("/")
-      ? selectedBook.key
-      : `/works/${selectedBook.key}`;
-
     const book = {
       title: selectedBook.title,
-      author: selectedBook.author_name[0],
+      author: selectedBook.authors[0].name,
       firstPublishYear:
-        selectedBook.first_publish_year ?? "Year unavailable",
-      coverUrl: selectedBook.cover_i
-        ? `https://covers.openlibrary.org/b/id/${selectedBook.cover_i}-M.jpg`
+        selectedBook.first_publish_year ??
+        "Year unavailable",
+      coverUrl: selectedBook.cover_id
+        ? `https://covers.openlibrary.org/b/id/${selectedBook.cover_id}-M.jpg`
         : "",
-      bookUrl: `https://openlibrary.org${workPath}`,
+      bookUrl: `https://openlibrary.org${selectedBook.key}`,
     };
 
     return new Response(JSON.stringify(book), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
-        "Cache-Control": "public, max-age=60",
+        "Cache-Control": "no-store",
       },
     });
   } catch (error) {
     console.error("Book function failed:", error);
 
-    // The panel remains usable even during an Open Library outage.
-    return new Response(JSON.stringify(FALLBACK_BOOK), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    return new Response(
+      JSON.stringify(FALLBACK_BOOK),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   }
 }
