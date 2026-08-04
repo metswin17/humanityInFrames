@@ -1,14 +1,39 @@
-const OPEN_LIBRARY_URL =
-  "https://openlibrary.org/subjects/self_help.json?limit=20";
+const GOOGLE_BOOKS_URL =
+  "https://www.googleapis.com/books/v1/volumes" +
+  "?q=subject:self-help" +
+  "&langRestrict=en" +
+  "&maxResults=30";
 
-const FALLBACK_BOOK = {
-  title: "The Alchemist",
-  author: "Paulo Coelho",
-  firstPublishYear: 1988,
-  coverUrl: "",
-  bookUrl:
-    "https://openlibrary.org/search?q=The+Alchemist+Paulo+Coelho",
-};
+const FALLBACK_BOOKS = [
+  {
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    firstPublishYear: "1988",
+    coverUrl: "",
+    bookUrl:
+      "https://books.google.com/books?q=The+Alchemist+Paulo+Coelho",
+  },
+  {
+    title: "Man's Search for Meaning",
+    author: "Viktor E. Frankl",
+    firstPublishYear: "1946",
+    coverUrl: "",
+    bookUrl:
+      "https://books.google.com/books?q=Man%27s+Search+for+Meaning",
+  },
+  {
+    title: "The Four Agreements",
+    author: "Don Miguel Ruiz",
+    firstPublishYear: "1997",
+    coverUrl: "",
+    bookUrl:
+      "https://books.google.com/books?q=The+Four+Agreements",
+  },
+];
+
+function selectRandom(items) {
+  return items[Math.floor(Math.random() * items.length)];
+}
 
 export default async function handler() {
   try {
@@ -16,12 +41,9 @@ export default async function handler() {
 
     const timeoutId = setTimeout(() => {
       controller.abort();
-    }, 12000);
+    }, 10000);
 
-    const response = await fetch(OPEN_LIBRARY_URL, {
-      headers: {
-        "User-Agent": "HumanityInFrames/1.0",
-      },
+    const response = await fetch(GOOGLE_BOOKS_URL, {
       signal: controller.signal,
     });
 
@@ -29,41 +51,40 @@ export default async function handler() {
 
     if (!response.ok) {
       throw new Error(
-        `Open Library responded with ${response.status}`
+        `Google Books responded with ${response.status}`
       );
     }
 
     const data = await response.json();
 
-    const usableBooks = data.works.filter(
-      (book) =>
-        book.title &&
-        book.authors?.length &&
-        book.key
-    );
+    const usableBooks = (data.items ?? []).filter((item) => {
+      const info = item.volumeInfo;
+
+      return (
+        info?.title &&
+        info?.authors?.length &&
+        (info.infoLink || item.id)
+      );
+    });
 
     if (usableBooks.length === 0) {
-      throw new Error(
-        "Open Library returned no usable books."
-      );
+      throw new Error("Google Books returned no usable books.");
     }
 
-    const randomIndex = Math.floor(
-      Math.random() * usableBooks.length
-    );
-
-    const selectedBook = usableBooks[randomIndex];
+    const selectedBook = selectRandom(usableBooks);
+    const info = selectedBook.volumeInfo;
 
     const book = {
-      title: selectedBook.title,
-      author: selectedBook.authors[0].name,
+      title: info.title,
+      author: info.authors[0],
       firstPublishYear:
-        selectedBook.first_publish_year ??
-        "Year unavailable",
-      coverUrl: selectedBook.cover_id
-        ? `https://covers.openlibrary.org/b/id/${selectedBook.cover_id}-M.jpg`
-        : "",
-      bookUrl: `https://openlibrary.org${selectedBook.key}`,
+        info.publishedDate?.slice(0, 4) ?? "Year unavailable",
+      coverUrl:
+        info.imageLinks?.thumbnail
+          ?.replace("http://", "https://") ?? "",
+      bookUrl:
+        info.infoLink ??
+        `https://books.google.com/books?id=${selectedBook.id}`,
     };
 
     return new Response(JSON.stringify(book), {
@@ -74,14 +95,15 @@ export default async function handler() {
       },
     });
   } catch (error) {
-    console.error("Book function failed:", error);
+    console.error("Google Books request failed:", error);
 
     return new Response(
-      JSON.stringify(FALLBACK_BOOK),
+      JSON.stringify(selectRandom(FALLBACK_BOOKS)),
       {
         status: 200,
         headers: {
           "Content-Type": "application/json",
+          "Cache-Control": "no-store",
         },
       }
     );
