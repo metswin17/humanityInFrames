@@ -125,3 +125,19 @@ header p{
     transform: none;
   }
 }
+
+.quote-status {
+  margin-bottom: 1.25rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.quote-error {
+  margin-bottom: 1.25rem;
+  color: #8b3a3a;
+}
+
+.inspiration-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
