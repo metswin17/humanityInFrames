@@ -1,8 +1,10 @@
+const GOOGLE_BOOKS_API_KEY = process.env.GOOGLE_BOOKS_API_KEY;
 const GOOGLE_BOOKS_URL =
   "https://www.googleapis.com/books/v1/volumes" +
   "?q=subject:self-help" +
   "&langRestrict=en" +
-  "&maxResults=30";
+  "&maxResults=30" +
+  `&key=${GOOGLE_BOOKS_API_KEY}`;
 
 const FALLBACK_BOOKS = [
   {
@@ -37,6 +39,9 @@ function selectRandom(items) {
 
 export default async function handler() {
   try {
+    if (!GOOGLE_BOOKS_API_KEY) {
+      throw new Error("Google Books API key is missing.");
+    }
     const controller = new AbortController();
 
     const timeoutId = setTimeout(() => {
