@@ -50,13 +50,21 @@ function BooksPanel() {
 
       {!isLoading && !error && (
         <>
-          {book.coverUrl && (
-            <img
-              src={book.coverUrl}
-              alt={book.title}
-              className="book-cover"
-            />
-          )}
+          {book.coverUrl ? (
+  <img
+    src={book.coverUrl}
+    alt={`Cover of ${book.title}`}
+    className="book-cover"
+    referrerPolicy="no-referrer"
+    onError={(event) => {
+      event.currentTarget.style.display = "none";
+    }}
+  />
+) : (
+  <div className="book-cover-placeholder">
+    Cover unavailable
+  </div>
+)}
 
           <h3 className="book-title">
             {book.title}

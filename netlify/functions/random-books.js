@@ -79,9 +79,12 @@ export default async function handler() {
       author: info.authors[0],
       firstPublishYear:
         info.publishedDate?.slice(0, 4) ?? "Year unavailable",
-      coverUrl:
-        info.imageLinks?.thumbnail
-          ?.replace("http://", "https://") ?? "",
+        coverUrl: (
+          info.imageLinks?.small ||
+          info.imageLinks?.thumbnail ||
+          info.imageLinks?.smallThumbnail ||
+          ""
+        ).replace("http://", "https://"),
       bookUrl:
         info.infoLink ??
         `https://books.google.com/books?id=${selectedBook.id}`,
