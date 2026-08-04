@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getRandomBook } from "../services/bookApi";
+import bookPlaceholder from "../assets/images/book-placeholder.svg";
 
 function BooksPanel() {
   const [book, setBook] = useState({
@@ -52,14 +53,15 @@ function BooksPanel() {
         <>
           {book.coverUrl ? (
   <img
-    src={book.coverUrl}
-    alt={`Cover of ${book.title}`}
-    className="book-cover"
-    referrerPolicy="no-referrer"
-    onError={(event) => {
-      event.currentTarget.style.display = "none";
-    }}
-  />
+  src={book.coverUrl || bookPlaceholder}
+  alt={`Cover of ${book.title}`}
+  className="book-cover"
+  referrerPolicy="no-referrer"
+  onError={(event) => {
+    event.currentTarget.onerror = null;
+    event.currentTarget.src = bookPlaceholder;
+  }}
+/>
 ) : (
   <div className="book-cover-placeholder">
     Cover unavailable

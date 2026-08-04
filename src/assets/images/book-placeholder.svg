@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="360" viewBox="0 0 240 360">
+  <rect width="240" height="360" rx="14" fill="#2f4f4f"/>
+  <rect x="18" y="18" width="204" height="324" rx="10" fill="#f7f4ec"/>
+  <path d="M120 105c-25-18-55-18-78-8v135c24-9 53-8 78 10z" fill="#d8d2c6"/>
+  <path d="M120 105c25-18 55-18 78-8v135c-24-9-53-8-78 10z" fill="#c8c0b2"/>
+  <line x1="120" y1="105" x2="120" y2="242" stroke="#6b6375" stroke-width="3"/>
+  <text x="120" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#2f4f4f">
+    Humanity in Frames
+  </text>
+  <text x="120" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#6b6375">
+    Recommended Reading
+  </text>
+</svg> bnm,./
+xv
