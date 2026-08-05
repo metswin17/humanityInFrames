@@ -1,4 +1,5 @@
-const QUOTE_API_URL = "/.netlify/functions/random-quote";
+const QUOTE_API_URL =
+  "https://humanityinframesbck.onrender.com/api/quote";
 
 export async function getRandomQuote() {
   const response = await fetch(QUOTE_API_URL);

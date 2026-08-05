@@ -1,4 +1,5 @@
-const BOOK_API_URL = "/.netlify/functions/random-books";
+const BOOK_API_URL =
+  "https://humanityinframesbck.onrender.com/api/books";
 
 export async function getRandomBook() {
   const response = await fetch(BOOK_API_URL);
