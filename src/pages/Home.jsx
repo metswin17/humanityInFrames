@@ -3,8 +3,8 @@ import BooksPanel from "../components/BooksPanel";
 import InspirationalCarousel from "../components/InspirationalCarousel";
 import PictureFrame from "../components/PictureFrame";
 
-import frameImageOne from "../assets/images/Exhilirating.jpg";
-import frameImageTwo from "../assets/images/PortStern.jpg";
+import frameImageOne from "../assets/images/Journey.jpg";
+import frameImageTwo from "../assets/images/NewHope.jpg";
 
 function Home() {
   return (

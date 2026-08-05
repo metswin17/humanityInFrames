@@ -51,8 +51,8 @@ function BooksPanel() {
 
       {!isLoading && !error && (
         <>
-          {book.coverUrl ? (
-  <img
+          
+          <img
   src={book.coverUrl || bookPlaceholder}
   alt={`Cover of ${book.title}`}
   className="book-cover"
@@ -62,11 +62,6 @@ function BooksPanel() {
     event.currentTarget.src = bookPlaceholder;
   }}
 />
-) : (
-  <div className="book-cover-placeholder">
-    Cover unavailable
-  </div>
-)}
 
           <h3 className="book-title">
             {book.title}
