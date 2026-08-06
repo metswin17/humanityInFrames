@@ -491,3 +491,51 @@ header p{
   transform: scale(1.15);
   color: #2f4f4f;
 }
+
+.about-opening-quote {
+  margin-bottom: 1rem;
+  color: #5c4033;
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  letter-spacing: 0.02rem;
+}
+
+.about-closing-thought {
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(47, 79, 79, 0.2);
+  color: #2f4f4f;
+  font-family: Georgia, serif;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+.about-signature {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.about-signature h4 {
+  margin: 0.4rem 0;
+
+  font-family: "Caveat", cursive;
+  font-size: 2.1rem;
+  font-weight: 400;
+
+  color: #2f4f4f;
+
+  letter-spacing: 1px;
+}
+
+.about-signature p {
+  margin: .25rem 0;
+}
+
+.about-motto {
+  margin-top: 1rem;
+  color: #5c4033;
+  font-style: italic;
+  letter-spacing: .08rem;
+}
