@@ -17,10 +17,13 @@ function About() {
       }}
     >
       <div className="about-layout">
-        <div className="about-icons left-icons">
-          <FaGlobeAmericas />
-          <FaLeaf />
-          <FaHandsHelping />
+      <div
+  className="about-icons left-icons"
+  aria-label="Earth, growth, and unity"
+>
+<FaGlobeAmericas aria-hidden="true" />
+<FaLeaf aria-hidden="true" />
+<FaHandsHelping aria-hidden="true" />
         </div>
 
         <section className="about-card">
@@ -69,10 +72,13 @@ function About() {
 
 </section>
 
-        <div className="about-icons right-icons">
-          <FaDove />
-          <FaWater />
-          <FaSun />
+<div
+  className="about-icons right-icons"
+  aria-label="Peace, water, and hope"
+>
+<FaDove aria-hidden="true" />
+<FaWater aria-hidden="true" />
+<FaSun aria-hidden="true" />
         </div>
       </div>
     </main>
