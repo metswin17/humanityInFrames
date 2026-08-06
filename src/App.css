@@ -82,11 +82,6 @@ header p{
     color 0.2s ease;
 }
 
-.inspiration-button:hover {
-  background: #2f4f4f;
-  color: #ffffff;
-}
-
 .decorative-frames {
   display: flex;
   justify-content: space-between;
@@ -152,20 +147,6 @@ header p{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.book-cover-placeholder {
-  width: 120px;
-  min-height: 170px;
-  margin: 0 auto 1rem;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #d8d2c6;
-  border-radius: 10px;
-  background: #f7f4ec;
-  color: #6c757d;
-  font-size: 0.85rem;
-}
 
 .book-modal {
   overflow: hidden;
@@ -331,16 +312,6 @@ header p{
   box-shadow: 0 5px 12px rgba(47, 79, 79, 0.18);
 }
 
-.book-modal-cover {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.book-modal-cover:hover {
-  transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
-}
 
 @media (prefers-reduced-motion: reduce) {
   .page-reveal,
@@ -478,7 +449,7 @@ header p{
 
   font-size: 2rem;
 
-  color: #8B6F82;
+  color: rgba(47,79,79,.75);
 }
 
 .about-icons svg {
@@ -488,7 +459,7 @@ header p{
 }
 
 .about-icons svg:hover {
-  transform: scale(1.15);
+  transform: scale(1.08);
   color: #2f4f4f;
 }
 
@@ -538,4 +509,92 @@ header p{
   color: #5c4033;
   font-style: italic;
   letter-spacing: .08rem;
+}
+
+.books-panel {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 3.6rem;
+  }
+
+  header h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-image {
+    height: 420px;
+  }
+
+  .reveal-carousel {
+    margin-top: 2rem;
+  }
+
+  .about-page {
+    padding: 1.5rem;
+  }
+
+  .about-layout {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .about-icons {
+    font-size: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .about-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header h2 {
+    font-size: 1.25rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .carousel-image {
+    height: 320px;
+  }
+
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .left-icons {
+    order: 1;
+  }
+
+  .about-card {
+    order: 2;
+  }
+
+  .right-icons {
+    order: 3;
+  }
 }
