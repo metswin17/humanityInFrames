@@ -10,14 +10,19 @@ function Home() {
   return (
     <main className="container mt-5">
       <div className="row align-items-start">
-        <div className="col-md-4">
-          <QuotePanel />
-          <BooksPanel />
-        </div>
+      <div className="col-md-4">
+  <div className="page-reveal reveal-quote">
+    <QuotePanel />
+  </div>
 
-        <div className="col-md-8">
-          <InspirationalCarousel />
-        </div>
+  <div className="page-reveal reveal-book">
+    <BooksPanel />
+  </div>
+</div>
+
+<div className="col-md-8 page-reveal reveal-carousel">
+  <InspirationalCarousel />
+</div>
       </div>
 
       <div className="decorative-frames">

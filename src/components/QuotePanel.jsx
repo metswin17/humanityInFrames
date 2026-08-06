@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getRandomQuote } from "../services/quoteApi";
 
 function QuotePanel() {
@@ -9,6 +9,9 @@ function QuotePanel() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  const [isEmphasized, setIsEmphasized] = useState(false);
+
+  const emphasisTimeoutRef = useRef(null);
 
   async function loadQuote() {
     try {
@@ -17,9 +20,22 @@ function QuotePanel() {
 
       const newQuote = await getRandomQuote();
       setQuote(newQuote);
+
+      setIsEmphasized(false);
+
+      if (emphasisTimeoutRef.current) {
+        clearTimeout(emphasisTimeoutRef.current);
+      }
+
+      requestAnimationFrame(() => {
+        setIsEmphasized(true);
+      });
+
+      emphasisTimeoutRef.current = setTimeout(() => {
+        setIsEmphasized(false);
+      }, 2600);
     } catch (error) {
       console.error("Quote request failed:", error);
-
       setError("A new quote could not be loaded.");
     } finally {
       setIsLoading(false);
@@ -28,6 +44,12 @@ function QuotePanel() {
 
   useEffect(() => {
     loadQuote();
+
+    return () => {
+      if (emphasisTimeoutRef.current) {
+        clearTimeout(emphasisTimeoutRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -45,7 +67,13 @@ function QuotePanel() {
       )}
 
       {!isLoading && !error && (
-        <>
+        <div
+          className={
+            isEmphasized
+              ? "quote-content quote-emphasized"
+              : "quote-content"
+          }
+        >
           <blockquote className="quote-text">
             “{quote.text}”
           </blockquote>
@@ -53,7 +81,7 @@ function QuotePanel() {
           <p className="quote-author">
             — {quote.author}
           </p>
-        </>
+        </div>
       )}
 
       <button

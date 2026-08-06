@@ -4,7 +4,7 @@ import imageOne from "../assets/images/TeachPeace.jpg";
 import imageTwo from "../assets/images/Exhilirating.jpg";
 import imageThree from "../assets/images/RocklandMaine.jpg";
 import imageFour from "../assets/images/Listen.jpg";
-import imageFive from "../assets/images/LetitGo.jpg";
+import imageFive from "../assets/images/LeoTolstoy.jpg";
 import imageSix from "../assets/images/Humanity.jpg";
 
 function InspirationalCarousel() {
@@ -36,14 +36,6 @@ function InspirationalCarousel() {
 
       <Carousel.Item>
         <img
-          className="d-block w-100 carousel-image"
-          src={imageFour}
-          alt="Inspirational Quote"
-        />
-      </Carousel.Item>
-
-      <Carousel.Item>
-      <img
           className="d-block w-100 carousel-image"
           src={imageFour}
           alt="Inspirational Quote"
