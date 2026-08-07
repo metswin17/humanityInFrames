@@ -38,15 +38,25 @@ header p{
 
 .carousel {
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
-}
 
+  border-radius: 14px;
+
+  border: 1px solid rgba(92,64,51,.15);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.16);
+}
 .quote-panel {
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.72);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.6rem;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  border: 1px solid rgba(92, 64, 51, 0.18);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.10);
 }
 
 .panel-heading {
@@ -71,15 +81,35 @@ header p{
 }
 
 .inspiration-button {
-  padding: 0.55rem 1rem;
+  padding: 0.6rem 1.2rem;
+
   border: 1px solid #2f4f4f;
-  border-radius: 8px;
-  background: transparent;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.55);
+
   color: #2f4f4f;
+
+  font-weight: 600;
+  letter-spacing: .03rem;
+
   cursor: pointer;
+
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+    transform .25s ease,
+    box-shadow .25s ease,
+    background-color .25s ease,
+    color .25s ease;
+}
+
+.inspiration-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #2f4f4f;
+  color: white;
+
+  box-shadow:
+    0 6px 14px rgba(47,79,79,.20);
 }
 
 .decorative-frames {
@@ -512,10 +542,16 @@ header p{
 }
 
 .books-panel {
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.72);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.6rem;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  border: 1px solid rgba(92, 64, 51, 0.18);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.10);
 }
 
 @media (max-width: 768px) {
