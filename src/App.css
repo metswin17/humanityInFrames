@@ -634,3 +634,34 @@ header p{
     order: 3;
   }
 }
+
+.home-page {
+  position: relative;
+}
+
+.home-leaf {
+  position: absolute;
+  width: 180px;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-leaf-top-left {
+  top: -40px;
+  left: -90px;
+  transform: rotate(-18deg);
+}
+
+.home-leaf-bottom-right {
+  right: -90px;
+  bottom: -20px;
+  transform: rotate(160deg);
+}
+
+.home-page > .row,
+.home-page > .decorative-frames {
+  position: relative;
+  z-index: 1;
+}
+
