@@ -11,10 +11,10 @@ import imageEight from "../assets/images/Branches.jpg";
 import imageNine from"../assets/images/TakeitIn.jpg";
 import imageTen from "../assets/images/DoubleRainbow.jpg";
 import imageEleven from "../assets/images/Leave-people-better.png";
-import imageTwelve from "../assets/images/Pasteles.jpg";
+import imageTwelve from "../assets/images/Steeproad.jpg";
 import imageThirteen from "../assets/images/AnotherDay.jpg";
 import imageFourteen from "../assets/images/Leaf-translucent.jpg";
-import imageFifteen from "../assets/images/lighthouse.jpg";
+import imageFifteen from "../assets/images/lighthouse.jpg"
 import imageSixteen from "../assets/images/bookflower.jpg"
 
 
@@ -115,7 +115,7 @@ function InspirationalCarousel() {
         <img
           className="d-block w-100 carousel-image"
           src={imageTwelve}
-          alt="Pasteles"
+          alt="Steeproad"
         />
       </Carousel.Item>
 
