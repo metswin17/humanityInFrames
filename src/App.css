@@ -641,27 +641,48 @@ header p{
 
 .home-leaf {
   position: absolute;
-  width: 180px;
-  opacity: 0.10;
+  width: 230px;
+
+  mix-blend-mode: multiply;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 }
 
 .home-leaf-top-left {
-  top: -40px;
-  left: -90px;
+  top: -370px;
+  left: -150px;
   transform: rotate(-18deg);
 }
 
+
 .home-leaf-bottom-right {
-  right: -90px;
-  bottom: -20px;
+  width: 170px;
+  right: -165px;
+  bottom: 225px;
   transform: rotate(160deg);
 }
 
 .home-page > .row,
 .home-page > .decorative-frames {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
+.carousel-reflection {
+  margin: 1.4rem 0 0;
+  color: #5c4033;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.55;
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
+
+.carousel-reflection span {
+  display: block;
+  margin-top: 0.45rem;
+  color: #6c757d;
+  font-size: 0.82rem;
+  font-style: normal;
+}
