@@ -47,7 +47,7 @@ function Home() {
     Expand your mind
     To understand<br />
     We all must live
-    In peace Together<br />
+    In Peace<br />
     Extend your hand
     To help the plan<br />
     Of love to all
