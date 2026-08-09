@@ -7,8 +7,8 @@ import skeletonLeaf from "../assets/images/vibrant-rue.jpg";
 import skeletonLeafTwo from "../assets/images/pale-blues.jpg";
 
 
-import frameImageOne from "../assets/images/lureofadventure.jpg";
-import frameImageTwo from "../assets/images/Journey.jpg";
+import frameImageOne from "../assets/images/Journey.jpg";
+import frameImageTwo from "../assets/images/andsoitbegins.jpg";
 
 function Home() {
   return (

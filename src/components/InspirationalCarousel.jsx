@@ -6,6 +6,19 @@ import imageThree from "../assets/images/RocklandMaine.jpg";
 import imageFour from "../assets/images/Listen.jpg";
 import imageFive from "../assets/images/LeoTolstoy.jpg";
 import imageSix from "../assets/images/Humanity.jpg";
+import imageSeven from "../assets/images/Believe.jpg";
+import imageEight from "../assets/images/Branches.jpg";
+import imageNine from"../assets/images/TakeitIn.jpg";
+import imageTen from "../assets/images/DoubleRainbow.jpg";
+import imageEleven from "../assets/images/Leave-people-better.png";
+import imageTwelve from "../assets/images/EugeneVDebs.jpg";
+import imageThirteen from "../assets/images/AnotherDay.jpg";
+import imageFourteen from "../assets/images/Leaf-translucent.jpg";
+import imageFifteen from "../assets/images/lighthouse.jpg";
+import imageSixteen from "../assets/images/bookflower.jpg"
+
+
+
 
 function InspirationalCarousel() {
   return (
@@ -58,7 +71,90 @@ function InspirationalCarousel() {
         />
       </Carousel.Item>
 
-    </Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageSeven}
+          alt="Believe"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageEight}
+          alt="Branches"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageNine}
+          alt="TakeitIn"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTen}
+          alt="DoubleRainbow"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageEleven}
+          alt="Leave-people-better"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwelve}
+          alt="EugeneVDebs"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageThirteen}
+          alt="AnotherDay"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageFourteen}
+          alt="Leaf-translucent"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageFifteen}
+          alt="lighthouse"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageSixteen}
+          alt="bookflower"
+        />
+      </Carousel.Item>
+
+
+      
+      </Carousel>
+
   );
 }
 
