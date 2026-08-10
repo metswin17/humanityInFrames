@@ -44,66 +44,110 @@ function Home() {
   <InspirationalCarousel />
 </div>
 
+<section className="journey-note">
+  <h3>Continue Exploring</h3>
+
+  <p className="journey-formats">
+    Read • Listen • Watch
+  </p>
+
+  <p className="journey-description">
+    Stories, audio reflections, and videos are linked below.
+  </p>
+</section>
+
 </div> {/* closes row */}
 
 <section className="story-bar">
   <h2>Stories of Humanity</h2>
 
-  <p className="story-intro">
-    Every quote begins with a thought.
-    Every book explores an idea.
-    Every story reminds us we are human.
-  </p>
 
   <div className="story-links">
     <a
-      href="YOUR_LINK_HERE"
+      href="https://dailyinspiredlife.com/falling-in-love-with-the-one-by-hannah-teslin/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      The Starfish Story
+      Falling for the One
     </a>
 
     <a
-      href="YOUR_LINK_HERE"
+      href="https://storycorps.org/stories/paquita-williams-and-laura-lane/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      The Two Wolves
+      Train to the Heart
     </a>
 
     <a
-      href="YOUR_LINK_HERE"
+      href="https://storycorps.org/animation/two-by-two/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      The Cracked Pot
+      Two by Two Wedding
     </a>
 
     <a
-      href="YOUR_LINK_HERE"
+      href="https://www.youtube.com/watch?v=5820t-xwLrk"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Boy and the Butterfly
+    </a><a
+      href="https://storycorps.org/podcast/what-were-made-of/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      What We're Made Of
+    </a>
+
+    <a
+      href="https://storycorps.org/stories/paquita-williams-and-laura-lane/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Train to the Heart
+    </a>
+
+    <a
+      href="https://storycorps.org/animation/two-by-two/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Two by Two Wedding
+    </a>
+
+    <a
+      href="https://www.youtube.com/watch?v=5820t-xwLrk"
       target="_blank"
       rel="noopener noreferrer"
     >
       The Boy and the Butterfly
     </a>
+
   </div>
 </section>
 
 <div className="decorative-frames">
-  <div className="decorative-frame decorative-frame-left">
-    <PictureFrame
-      src={frameImageOne}
-      alt="A peaceful inspirational scene"
-    />
-  </div>
+<div className="decorative-frame decorative-frame-left">
+  <PictureFrame
+    src={frameImageOne}
+    alt="A peaceful inspirational scene"
+  />
+</div>
 
-  <div className="decorative-frame decorative-frame-right">
-    <PictureFrame
-      src={frameImageTwo}
-      alt="A reflective outdoor scene"
-    />
-  </div>
+<p className="frame-reflection">
+  Every quote begins with a thought.
+  Every book explores an idea.
+  Every story reminds us we are human.
+</p>
+
+<div className="decorative-frame decorative-frame-right">
+  <PictureFrame
+    src={frameImageTwo}
+    alt="A reflective outdoor scene"
+  />
+</div>
 </div>
 
 </main>

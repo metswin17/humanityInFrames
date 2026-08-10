@@ -15,10 +15,10 @@ import imageTwelve from "../assets/images/Steeproad.jpg";
 import imageThirteen from "../assets/images/AnotherDay.jpg";
 import imageFourteen from "../assets/images/Leaf-translucent.jpg";
 import imageFifteen from "../assets/images/lighthouse.jpg"
-import imageSixteen from "../assets/images/bookflower.jpg"
-import imageSeventeen from "../assets/images/Live.jpg";
+import imageSixteen from "../assets/images/Sudan-Hope.jpg"
+import imageSeventeen from "../assets/images/backgammon.jpg";
 import imageEighteen from "../assets/images/MotherLeaders.jpg"
-import imageNineteen from "../assets/images/HumanRace.jpg"
+import imageNineteen from "../assets/images/Different2.jpg"
 
 
 
@@ -149,7 +149,7 @@ function InspirationalCarousel() {
         <img
           className="d-block w-100 carousel-image"
           src={imageSixteen}
-          alt="bookflower"
+          alt="Sudan-Hope"
         />
       </Carousel.Item>
 
@@ -157,7 +157,7 @@ function InspirationalCarousel() {
         <img
           className="d-block w-100 carousel-image"
           src={imageSeventeen}
-          alt="Live"
+          alt="backgammon"
         />
       </Carousel.Item>
 
@@ -173,7 +173,7 @@ function InspirationalCarousel() {
         <img
           className="d-block w-100 carousel-image"
           src={imageNineteen}
-          alt="HumanRace"
+          alt="Different2"
         />
       </Carousel.Item>
 
