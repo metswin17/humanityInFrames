@@ -686,3 +686,47 @@ header p{
   font-size: 0.82rem;
   font-style: normal;
 }
+
+.story-bar {
+  margin: 3rem 0 2rem;
+  padding: 2rem;
+
+  border-top: 1px solid rgba(47, 79, 79, 0.15);
+  border-bottom: 1px solid rgba(47, 79, 79, 0.15);
+
+  text-align: center;
+}
+
+.story-bar h2 {
+  margin-bottom: 1rem;
+  color: #2f4f4f;
+  font-size: 1.6rem;
+}
+
+.story-intro {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+
+  color: #5c4033;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.story-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.story-links a {
+  color: #2f4f4f;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  transition: color 0.25s ease;
+}
+
+.story-links a:hover {
+  color: #5c4033;
+  text-decoration: underline;
+}

@@ -27,7 +27,7 @@ function Home() {
   aria-hidden="true"
   className="home-leaf home-leaf-bottom-right"
 />
-
+<main className="container mt-5 home-page"></main>
 
       <div className="row align-items-start">
         <div className="col-md-4">
@@ -36,44 +36,77 @@ function Home() {
           </div>
 
           <div className="page-reveal reveal-book">
-            <BooksPanel />
-          </div>
-        </div>
-
-        <div className="col-md-8 page-reveal reveal-carousel">
-  <InspirationalCarousel />
-
-  <p className="carousel-reflection">
-    Expand your mind
-    To understand<br />
-    We all must live
-    In Peace<br />
-    Extend your hand
-    To help the plan<br />
-    Of love to all
-    Humankind on Earth
-    <span>— Lonnie Liston Smith</span>
-  </p>
+  <BooksPanel />
 </div>
-      </div>
+</div>
 
-      <div className="decorative-frames">
-        <div className="decorative-frame decorative-frame-left">
-          <PictureFrame
-            src={frameImageOne}
-            alt="A peaceful inspirational scene"
-          />
-        </div>
+<div className="col-md-8 page-reveal reveal-carousel">
+  <InspirationalCarousel />
+</div>
 
-        <div className="decorative-frame decorative-frame-right">
-          <PictureFrame
-            src={frameImageTwo}
-            alt="A reflective outdoor scene"
-          />
-        </div>
-      </div>
+</div> {/* closes row */}
 
-    </main>
+<section className="story-bar">
+  <h2>Stories of Humanity</h2>
+
+  <p className="story-intro">
+    Every quote begins with a thought.
+    Every book explores an idea.
+    Every story reminds us we are human.
+  </p>
+
+  <div className="story-links">
+    <a
+      href="YOUR_LINK_HERE"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Starfish Story
+    </a>
+
+    <a
+      href="YOUR_LINK_HERE"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Two Wolves
+    </a>
+
+    <a
+      href="YOUR_LINK_HERE"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Cracked Pot
+    </a>
+
+    <a
+      href="YOUR_LINK_HERE"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Boy and the Butterfly
+    </a>
+  </div>
+</section>
+
+<div className="decorative-frames">
+  <div className="decorative-frame decorative-frame-left">
+    <PictureFrame
+      src={frameImageOne}
+      alt="A peaceful inspirational scene"
+    />
+  </div>
+
+  <div className="decorative-frame decorative-frame-right">
+    <PictureFrame
+      src={frameImageTwo}
+      alt="A reflective outdoor scene"
+    />
+  </div>
+</div>
+
+</main>
   );
 }
 

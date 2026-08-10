@@ -16,7 +16,9 @@ import imageThirteen from "../assets/images/AnotherDay.jpg";
 import imageFourteen from "../assets/images/Leaf-translucent.jpg";
 import imageFifteen from "../assets/images/lighthouse.jpg"
 import imageSixteen from "../assets/images/bookflower.jpg"
-
+import imageSeventeen from "../assets/images/Live.jpg";
+import imageEighteen from "../assets/images/MotherLeaders.jpg"
+import imageNineteen from "../assets/images/HumanRace.jpg"
 
 
 
@@ -148,6 +150,30 @@ function InspirationalCarousel() {
           className="d-block w-100 carousel-image"
           src={imageSixteen}
           alt="bookflower"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageSeventeen}
+          alt="Live"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageEighteen}
+          alt="MotherLeaders"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageNineteen}
+          alt="HumanRace"
         />
       </Carousel.Item>
 
