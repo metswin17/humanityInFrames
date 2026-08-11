@@ -102,27 +102,27 @@ function Home() {
     </a>
 
     <a
-      href="https://storycorps.org/stories/paquita-williams-and-laura-lane/"
+      href="https://storycorps.org/stories/18-years-after-katrina-a-grocer-rebuilds-his-community-one-shop-at-a-time/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Train to the Heart
+      After Katrina, A Grocer Rebuilds
     </a>
 
     <a
-      href="https://storycorps.org/animation/two-by-two/"
+      href="https://dailyinspiredlife.com/mother-daughter-relationship-reset-with-saniya-india/#"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Two by Two Wedding
+      Mother Daughter Relationsh Reset
     </a>
 
     <a
-      href="https://www.youtube.com/watch?v=5820t-xwLrk"
+      href="https://dailyinspiredlife.com/storms-and-rainbows-my-triumph-over-domestic-abuse/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      The Boy and the Butterfly
+      Storms and Rainbows
     </a>
 
   </div>

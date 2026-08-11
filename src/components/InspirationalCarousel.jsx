@@ -14,11 +14,23 @@ import imageEleven from "../assets/images/Leave-people-better.png";
 import imageTwelve from "../assets/images/Steeproad.jpg";
 import imageThirteen from "../assets/images/AnotherDay.jpg";
 import imageFourteen from "../assets/images/Leaf-translucent.jpg";
-import imageFifteen from "../assets/images/lighthouse.jpg"
-import imageSixteen from "../assets/images/Sudan-Hope.jpg"
+import imageFifteen from "../assets/images/lighthouse.jpg";
+import imageSixteen from "../assets/images/Sudan-Hope.jpg";
 import imageSeventeen from "../assets/images/backgammon.jpg";
 import imageEighteen from "../assets/images/MotherLeaders.jpg"
-import imageNineteen from "../assets/images/Different2.jpg"
+import imageNineteen from "../assets/images/Different2.jpg";
+import imageTwenty from "../assets/images/StatueofLiberty.jpg";
+import imageTwentyOne from "../assets/images/OregonCoast.jpg";
+import imageTwentyTwo from "../assets/images/hugs.jpg";
+import imageTwentyThree from "../assets/images/family.png";
+import imageTwentyFour from "../assets/images/hummer.jpg";
+import imageTwentyFive from "../assets/images/mother.jpg";
+import imageTwentySix from "../assets/images/rhumba.jpg";
+import imageTwentySeven from "../assets/images/Seaside.jpg";
+import imageTwentyEight from "../assets/images/working.jpg";
+import imageTwentyNine from "../assets/images/dance.jpg";
+import imageThirty from "../assets/images/AnnieRE.jpg";
+import imageThirtyOne from "../assets/images/hummed.jpg";
 
 
 
@@ -176,6 +188,103 @@ function InspirationalCarousel() {
           alt="Different2"
         />
       </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwenty}
+          alt="StatueofLiberty"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyOne}
+          alt="OregonCoast"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyTwo}
+          alt="hugs"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyThree}
+          alt="family"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyFour}
+          alt="hummer"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyFive}
+          alt="mother"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentySix}
+          alt="rhumba"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentySeven}
+          alt="Seaside"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyEight}
+          alt="working"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageTwentyNine}
+          alt="dance"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageThirty}
+          alt="AnnieRE"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageThirtyOne}
+          alt="hummed"
+        />
+      </Carousel.Item>
+
 
 
       
