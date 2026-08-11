@@ -32,7 +32,7 @@ import imageTwentyNine from "../assets/images/dance.jpg";
 import imageThirty from "../assets/images/AnnieRE.jpg";
 import imageThirtyOne from "../assets/images/hummed.jpg";
 import imageThirtyTwo from "../assets/images/human-kindness.jpg";
-
+import imageThirtyThree from "../assets/images/selfied.jpg";
 
 function InspirationalCarousel() {
   return (
@@ -282,6 +282,14 @@ function InspirationalCarousel() {
           className="d-block w-100 carousel-image"
           src={imageThirtyTwo}
           alt="human-kindness"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src={imageThirtyThree}
+          alt="selfied"
         />
       </Carousel.Item>
 
