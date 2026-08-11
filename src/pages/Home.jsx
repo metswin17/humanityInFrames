@@ -127,7 +127,7 @@ function Home() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Mother Daughter Relationsh Reset
+      Mother & Daughter Relation Reset
     </a>
 
     <a
