@@ -42,9 +42,9 @@ function About() {
 </p>
 
 <p>
-  Every quote, every photograph, and every book recommendation is an
-  invitation to slow down, discover something meaningful, and carry a
-  little inspiration forward into everyday life.
+  Every quote, every photograph, every book recommendation and story 
+    is an invitation to slow down, discover something meaningful, 
+    and carry a little inspiration forward into everyday life.
 </p>
 
 <p>
