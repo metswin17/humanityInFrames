@@ -31,7 +31,7 @@ import imageTwentyEight from "../assets/images/working.jpg";
 import imageTwentyNine from "../assets/images/dance.jpg";
 import imageThirty from "../assets/images/AnnieRE.jpg";
 import imageThirtyOne from "../assets/images/hummed.jpg";
-
+import imageThirtyTwo from "../assets/images/human-kindness.jpg";
 
 
 function InspirationalCarousel() {
@@ -280,8 +280,8 @@ function InspirationalCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100 carousel-image"
-          src={imageThirtyOne}
-          alt="hummed"
+          src={imageThirtyTwo}
+          alt="human-kindness"
         />
       </Carousel.Item>
 
