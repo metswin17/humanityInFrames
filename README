@@ -1,0 +1,91 @@
+# Humanity in Frames
+
+### A Place of Daily Inspiration
+
+**Inspire • Learn • Grow**
+
+Humanity in Frames is a full-stack inspirational web application created to provide a peaceful place for visitors to pause, reflect, discover meaningful ideas, and explore the shared experiences that connect humanity.
+
+Created by **Luis R. Lopez**.
+
+---
+. 
+## About the Project
+
+Humanity in Frames was created around a simple idea: even a few quiet moments can change the direction of a day.
+In the Hopes that it will help someone in any way. To give a moment of reflection of spirit lifting of being united 
+with others that feel the same need for comforting our spirit our soul our consciousness. 
+To Reset and reconnect with Humanity and with Mother Nature and Earth
+
+The site combines four forms of inspiration:
+
+- Quotes that introduce a thought
+- Books that encourage deeper learning
+- Images that create reflection
+- Stories that connect those ideas to human experiences
+
+The goal was to create an uncluttered and welcoming environment rather than a traditional information-heavy website.
+
+---
+
+## Features
+
+### Daily Inspiration
+Visitors can request a new inspirational quote and author.
+
+### Recommended Reading
+The application retrieves book recommendations through the Google Books API. Book information includes the title, author, publication year, cover image, and a link for further exploration.
+
+A fallback image is displayed when a book cover is unavailable.
+
+### Inspirational Carousel
+A rotating image carousel presents photography focused on people, nature, travel, reflection, and shared humanity.
+
+### Stories of Humanity
+A curated collection of external reading, audio, and video links allows visitors to continue exploring inspirational human stories.
+
+### About Page
+The About page explains the philosophy behind Humanity in Frames using reflective writing, symbolic icons, and personal imagery.
+
+---
+
+## Technologies
+
+### Frontend
+
+- React
+- Vite
+- React Router
+- React Bootstrap
+- React Icons
+- JavaScript
+- CSS
+
+### Backend
+
+- Node.js
+- Express
+- Axios
+- CORS
+- dotenv
+
+### APIs
+
+- Google Books API
+- ZenQuotes API
+
+---
+
+## Architecture
+
+Humanity in Frames uses a separate frontend and backend.
+
+```text
+React Frontend
+      |
+      v
+Express Backend
+      |
+      +----> Google Books API
+      |
+      +----> Quote API

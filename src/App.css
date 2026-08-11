@@ -768,20 +768,20 @@ header p{
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: center;
-  gap: 1rem 1.5rem;
-}
+  gap: 1.5rem 2rem;
 
-.frame-reflection {
-  max-width: 360px;
-  margin: 0;
-  align-self: center;
+  padding: 0.9rem 0;
 
-  color: #5c4033;
-  font-family: Georgia, serif;
-  font-size: 0.95rem;
-  font-style: italic;
-  line-height: 1.6;
-  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(47, 79, 79, 0.18),
+    transparent
+  );
+
+  background-size: 100% 1px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
