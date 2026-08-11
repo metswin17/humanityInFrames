@@ -22,7 +22,7 @@ import imageNineteen from "../assets/images/Different2.jpg";
 import imageTwenty from "../assets/images/StatueofLiberty.jpg";
 import imageTwentyOne from "../assets/images/OregonCoast.jpg";
 import imageTwentyTwo from "../assets/images/hugs.jpg";
-import imageTwentyThree from "../assets/images/family.png";
+import imageTwentyThree from "../assets/images/family.jpg";
 import imageTwentyFour from "../assets/images/hummer.jpg";
 import imageTwentyFive from "../assets/images/mother.jpg";
 import imageTwentySix from "../assets/images/rhumba.jpg";
