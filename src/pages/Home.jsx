@@ -41,7 +41,20 @@ function Home() {
 </div>
 
 <div className="col-md-8 page-reveal reveal-carousel">
-  <InspirationalCarousel />
+<InspirationalCarousel />
+
+<div className="carousel-poem">
+  <p>
+    Expand your Mind to Understand,
+    we all must Live in Peace.<br />
+    Extend your Hand to help the Plan
+    of Love to all Humankind on Earth.
+  </p>
+
+  <div className="carousel-poem-author">
+    — Lonnie Liston Smith
+  </div>
+</div>
 </div>
 
 <section className="journey-note">

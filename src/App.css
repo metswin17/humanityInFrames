@@ -799,3 +799,31 @@ header p{
     margin: 1rem 0;
   }
 }
+
+.carousel-poem {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+
+  text-align: center;
+}
+
+.carousel-poem p {
+  margin: 0;
+
+  color: #5c4033;
+
+  font-family: Georgia, serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.carousel-poem-author {
+  margin-top: .7rem;
+
+  color: #7b7b7b;
+
+  font-size: .9rem;
+
+  letter-spacing: 1px;
+}
